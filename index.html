@@ -27,27 +27,28 @@
 
   .whatsapp-button:hover {
     background-color: #3498db;
-  }
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #0f0f0f;
+      background-color: #1f1f1f;
       color: white;
     }
+    
     header {
-      background-color: #1f1f1f;
-      padding: 2rem 1.5rem;
+      background-color: #0f0f0f;
+      padding: 0.3rem 0.3rem;
       text-align: center;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    header h1 {
+      font-family: 'Anton';
     }
     .intro {
       max-width: 800px;
       margin: 3rem auto 2rem auto;
       text-align: center;
       padding: 0 1rem;
+      font-family: "Anton", sans-serif;
     }
     .services {
       display: grid;
@@ -58,7 +59,7 @@
       padding: 0 1rem;
     }
     .card {
-      background: #1e1e1e;
+      background:#0f0f0f;
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -66,6 +67,10 @@
       position: relative;
       cursor: pointer;
     }
+    .payment-card {
+      margin: 0 20px; /* separa a los costados */
+    }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 20px #5dade2;
@@ -121,7 +126,7 @@
       transition: color 0.3s;
     }
     .social a:hover {
-      color: white;
+      color: #3498db;
     }
     @media (max-width: 600px) {
       h1 {
@@ -130,13 +135,15 @@
       .card {
         padding: 1rem;
       }
+      
+ 
+
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Servicios Remotos MARO</h1>
-    <p>Optimización, limpieza y rendimiento para tu PC desde cualquier lugar</p>
+    <h1> MARO </h1>
   </header>
 
   <div class="intro" style="display: flex; justify-content: center; text-align: center;">
@@ -239,7 +246,7 @@
 
     <div class="card" onclick="toggleDetails(this)">
       <h3>🛠 Diagnóstico + Solución</h3>
-      <p class="price">Desde $6 USD / $6.000 ARS</p>
+      <p class="price">Desde $8 USD / $8.000 ARS</p>
       <p class="click">click para ver</p>
       <div class="details">
         <ul>
@@ -283,7 +290,7 @@
       </div>
   
   </div>
-  <div class="card" onclick="toggleDetails(this)">
+  <div class="card payment-card" onclick="toggleDetails(this)">
   <h3>💳 Medios de pago</h3>
   <p>🌎 Si sos de <strong>Argentina</strong>, podés pagar por:</p>
   <ul>
