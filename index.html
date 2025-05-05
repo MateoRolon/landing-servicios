@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios Remotos MARO</title>
+  
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -12,17 +14,87 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color:#3498db;
+    background-color:#3533cd;
+ 
+
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     display: block;
-  margin: 15px auto 0 auto;
-  width: fit-content;
+    margin: 15px auto 0 auto;
+    width: fit-content;
+
+    
 
 
+
+  
+
+  }
+
+  .testimonials-section {
+    background-color: #1a1a1a;
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 900px;
+  }
+
+  .testimonials-section h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonials-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 12px;
+    gap: 1rem;
+  }
+
+  .testimonial-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .carousel-buttons {
+    margin-top: 1rem;
+  }
+
+  .carousel-buttons button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .carousel-buttons button:hover {
+    background-color: #3498db;
+  }
+
+  @media (max-width: 600px) {
+    .testimonials-section h2 {
+      font-size: 1.4rem;
+    }
   }
 
   .whatsapp-button:hover {
@@ -59,7 +131,7 @@
       padding: 0 1rem;
     }
     .card {
-      background:#0f0f0f;
+      background:#1a1a1a;
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -135,6 +207,7 @@
       .card {
         padding: 1rem;
       }
+
       
  
 
@@ -148,7 +221,7 @@
 
   <div class="intro" style="display: flex; justify-content: center; text-align: center;">
     <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px;">
-      <img src="perfil2.png" alt="Foto de perfil de Mateo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid #ccc;">
+      <img src="perfil11.png" alt="Foto de perfil de Mateo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid #ccc;">
       <p style="margin: 0;">
         Soy Mateo, técnico en computadoras con más de 6 años de experiencia. Tengo 24 años y me dedico al soporte técnico remoto y personalizado para mejorar el rendimiento de tu PC.
       </p>
@@ -164,7 +237,8 @@
     <div class="details">
       <p>Con esta herramienta vas a poder recibir soporte directamente en tu computadora, sin salir de tu casa. Solo necesitás seguir los pasos del video, aceptar la conexión, y yo me encargo de optimizar tu PC a distancia. Es rápido, seguro y 100% confiable.</p>
       <p>Es una forma práctica, segura y rápida de que te ayude sin mover un dedo.</p>
-      
+      <p>No importa en qué país estés 🌎, podés contratar el servicio igual. Trabajo con clientes de toda Latinoamérica ¡y también de otros lugares!</p>
+
       <!-- Video de YouTube explicativo -->
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-top:1rem;">
         <iframe src="https://www.youtube.com/embed/T2bs1XHkYuM" frameborder="0" allowfullscreen
@@ -235,7 +309,7 @@
         <ul>
           <li>Mejor rendimiento para videollamadas y multitarea</li>
           <li>Eliminación de procesos en segundo plano</li>
-          <li>Instalaciónde Office</li>
+          <li>Instalación de Office</li>
           <li>Activación de Windwos/Office</li> 
           <li>Chequeo de seguridad básica</li>
           
@@ -288,6 +362,30 @@
         </div>
         
       </div>
+      <div class="testimonials-section">
+        <h2>✨ Testimonios de Clientes ✨</h2>
+        <div class="testimonials-carousel" id="testimonialCarousel">
+          <div class="testimonial-slide">
+            <img src="test4.png" alt="Testimonio 1">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test22.png" alt="Testimonio 2">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test33.png" alt="Testimonio 3">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test55.png" alt="Testimonio 3">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test1.png" alt="Testimonio 3">
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="scrollTestimonials(-1)">⬅️</button>
+          <button onclick="scrollTestimonials(1)">➡️</button>
+        </div>
+      </div>
   
   </div>
   <div class="card payment-card" onclick="toggleDetails(this)">
@@ -322,6 +420,11 @@
     function toggleDetails(card) {
       card.classList.toggle('active');
     }
+    function scrollTestimonials(direction) {
+    const carousel = document.getElementById('testimonialCarousel');
+    const width = carousel.clientWidth;
+    carousel.scrollBy({ left: width * direction, behavior: 'smooth' });
+  }
   </script>
 </body>
 </html>
