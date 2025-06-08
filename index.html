@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios Remotos MARO</title>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+      .whatsapp-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color:#3533cd;
+ 
+
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: fit-content;
+
+    
+
+
+
+  
+
+  }
+
+  .testimonials-section {
+    background-color: #1a1a1a;
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 900px;
+  }
+
+  .testimonials-section h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonials-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 12px;
+    gap: 1rem;
+  }
+
+  .testimonial-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .carousel-buttons {
+    margin-top: 1rem;
+  }
+
+  .carousel-buttons button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .carousel-buttons button:hover {
+    background-color: #3498db;
+  }
+
+  @media (max-width: 600px) {
+    .testimonials-section h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .whatsapp-button:hover {
+    background-color: #3498db;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #1f1f1f;
+      color: white;
+    }
+    
+    header {
+      background-color: #0f0f0f;
+      padding: 0.3rem 0.3rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Anton';
+    }
+    .intro {
+      max-width: 800px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+      font-family: "Anton", sans-serif;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background:#1a1a1a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .payment-card {
+      margin: 0 20px; /* separa a los costados */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px #5dade2;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #3498db;
+    }
+    .price {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+    .click {
+      
+      margin-top: 1rem;
+      color: #ccc;
+    }
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      margin-top: 0;
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    .card.active .details {
+      max-height: 500px; /* Suficiente para cualquier contenido */
+      margin-top: 1rem;
+    }
+    .contact {
+      text-align: center;
+      margin: 4rem 0 2rem 0;
+      padding: 0 1rem;
+    }
+    .btn {
+      background-color: #3498db;
+      color: black;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .social {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .social a {
+      color: #3498db;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social a:hover {
+      color: #3498db;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+
+      
+ 
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> MARO </h1>
+  </header>
+
+  <div class="intro" style="display: flex; justify-content: center; text-align: center;">
+    <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px;">
+      <img src="perfil11.png" alt="Foto de perfil de Mateo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid #ccc;">
+      <p style="margin: 0;">
+        Soy Mateo, técnico en computadoras con más de 6 años de experiencia. Tengo 24 años y me dedico al soporte técnico remoto y personalizado para mejorar el rendimiento de tu PC.
+      </p>
+    </div>
+  </div>
+  
+  
+  
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>🔒 ¿Cómo funciona la conexión remota?</h3>
+    <p class="price">Explicación breve del proceso</p>
+    <p class="click">click para ver</p>
+    <div class="details">
+      <p>Con esta herramienta vas a poder recibir soporte directamente en tu computadora, sin salir de tu casa. Solo necesitás seguir los pasos del video, aceptar la conexión, y yo me encargo de optimizar tu PC a distancia. Es rápido, seguro y 100% confiable.</p>
+      <p>Es una forma práctica, segura y rápida de que te ayude sin mover un dedo.</p>
+      <p>No importa en qué país estés 🌎, podés contratar el servicio igual. Trabajo con clientes de toda Latinoamérica ¡y también de otros lugares!</p>
+
+      <!-- Video de YouTube explicativo -->
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-top:1rem;">
+        <iframe src="https://www.youtube.com/embed/T2bs1XHkYuM" frameborder="0" allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+        </iframe>
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://drive.google.com/drive/folders/1q9nZTPmov7ossZnrr6_ntHzML91c3COU?usp=drive_link" 
+           target="_blank" 
+           style="display: inline-block; padding: 12px 24px; font-size: 16px; color: white; background-color: #050505; border-radius: 8px; text-decoration: none;">
+          👉 Descargar desde Google Drive
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  <!-- Botón debajo del video -->
+
+  
+
+  <div class="services">
+    <div class="card" onclick="toggleDetails(this)">
+      <h3>💻 Pack Diagnostico y Optimización</h3>
+      <p class="price">Desde $14 USD / $14.000 ARS</p>
+      <p class="click">click para ver</p>
+      <div class="details">
+        <ul>
+          <li>Limpieza profunda de archivos temporales y basura</li>
+          <li>Desinstalación de programas innecesarios</li>
+          <li>Optimización del inicio del sistema</li>
+          <li>Chequeo básico de salud del sistema</li>
+          <li>Eliminación de bloatware</li> 
+          <li>Eliminación de virus en el sistema</li> 
+        </ul>
+        <br>
+        <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio%20de%20Pack%20Diagnóstico%20y%20Optimización" 
+        target="_blank" 
+        class="whatsapp-button center-button">
+        Solicitar este servicio
+     </a>
+     
+
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails(this)">
+      <h3>🎮 Pack Rendimiento Gamer</h3>
+      <p class="price">Desde $16 USD / $16.000 ARS</p>
+      <p class="click">click para ver</p>
+      <div class="details">
+        <ul>
+          <li>Desactivación de servicios innecesarios</li>
+          <li>Optimización de CPU y RAM para juegos</li>
+          <li>Configuración de rendimiento en GPU</li>
+          <li>Configuración y actualización de Drivers</li>
+          <li>Más FPS, menos latencia</li>
+          <li>Eliminación de bloatware</li> 
+        </ul>
+        <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio " target="_blank" class="whatsapp-button">Solicitar este servicio</a>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails(this)">
+      <h3>📚 Pack Oficina / Estudio</h3>
+      <p class="price">Desde $12 USD / $12.000 ARS</p>
+      <p class="click">click para ver</p>
+      <div class="details">
+        <ul>
+          <li>Mejor rendimiento para videollamadas y multitarea</li>
+          <li>Eliminación de procesos en segundo plano</li>
+          <li>Instalación de Office</li>
+          <li>Activación de Windwos/Office</li> 
+          <li>Chequeo de seguridad básica</li>
+          
+        </ul>
+        <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio " target="_blank" class="whatsapp-button">Solicitar este servicio</a>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails(this)">
+      <h3>🛠 Diagnóstico + Solución</h3>
+      <p class="price">Desde $15 USD / $15.000 ARS</p>
+      <p class="click">click para ver</p>
+      <div class="details">
+        <ul>
+          <li>Análisis completo de problemas de software</li>
+          <li>Configuración y actualización de Drivers</li>
+          <li>Solución de erroes especificos</li>
+          <li>Chequeo de hardware con herramientas remotas</li>
+          <li>Informe simple y solución personalizada</li>
+        </ul>
+        <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio " target="_blank" class="whatsapp-button">Solicitar este servicio</a>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails(this)">
+      <h3>🚀 Instalación de Windows Optimizado</h3>
+      <p class="price">Desde $25 USD / $25.000 ARS</p>
+      <p class="click">click para ver</p>
+      <div class="details">
+        <ul>
+          <li>Formateo completo e instalación limpia</li>
+          <li>Windows optimizado para rendimiento</li>
+          <li>Drivers esenciales, navegador y antivirus básico</li>
+          <li>Listo para usar con espacio libre maximizado</li>
+        </ul>
+        <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio " target="_blank" class="whatsapp-button">Solicitar este servicio</a>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <h3>💻 Pack instalación de programas</h3>
+        <p class="price">Desde $15 USD / $15.000 ARS</p>
+        <p class="click">click para ver</p>
+        <div class="details">
+          <ul>
+            <li>Instalación de cualquier programa que necesites</li>
+            <li>Ayuda con activación (Office, Windows, Adobe, etc.)</li>
+            <li>Configuración básica para que todo funcione correctamente</li>
+          </ul>
+          <a href="https://wa.me/543472520539?text=Hola%2C%20quiero%20solicitar%20el%20servicio " target="_blank" class="whatsapp-button">Solicitar este servicio</a>
+        </div>
+        
+      </div>
+      <div class="testimonials-section">
+        <h2>✨ Testimonios de Clientes ✨</h2>
+        <div class="testimonials-carousel" id="testimonialCarousel">
+          <div class="testimonial-slide">
+            <img src="test4.png" alt="Testimonio 1">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test22.png" alt="Testimonio 2">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test33.png" alt="Testimonio 3">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test55.png" alt="Testimonio 3">
+          </div>
+          <div class="testimonial-slide">
+            <img src="test1.png" alt="Testimonio 3">
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="scrollTestimonials(-1)">⬅️</button>
+          <button onclick="scrollTestimonials(1)">➡️</button>
+        </div>
+      </div>
+  
+  </div>
+  <div class="card payment-card" onclick="toggleDetails(this)">
+  <h3>💳 Medios de pago</h3>
+  <p>🌎 Si sos de <strong>Argentina</strong>, podés pagar por:</p>
+  <ul>
+    <li>Transferencia bancaria</li>
+    <li>Mercado Pago (alias: <strong>mateo062.mp</strong>)</li>
+    <li>Ualá</li>
+  </ul>
+  
+  <p>🌍 Si sos de <strong>otro país</strong>, podés pagar por:</p>
+  <ul>
+    <li>PayPal (<strong>mateorolon64@gmail.com</strong>)</li>
+    <li>AirTM</li>
+    <li>Binance (Crypto)</li>
+  </ul>
+  <p>📩 Una vez realizado el pago, enviame el comprobante por WhatsApp para comenzar con el servicio.</p>
+</div> 
+  <div class="contact">
+    <p>📲 Contactame por WhatsApp y coordinamos tu turno:</p>
+    <a href="https://wa.me/543472520539" class="btn">Enviar mensaje</a>
+  </div>
+
+  <div class="social">
+    <a href="https://www.instagram.com/ma_ro_64" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@ma_ro_64" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="mailto:mateorolon64@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <script>
+    function toggleDetails(card) {
+      card.classList.toggle('active');
+    }
+    function scrollTestimonials(direction) {
+    const carousel = document.getElementById('testimonialCarousel');
+    const width = carousel.clientWidth;
+    carousel.scrollBy({ left: width * direction, behavior: 'smooth' });
+  }
+  </script>
+</body>
+</html>
